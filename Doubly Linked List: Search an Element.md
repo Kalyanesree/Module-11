@@ -5,7 +5,6 @@ This Python program demonstrates the implementation of a **Doubly Linked List** 
 ---
 
 ## Aim
-
 To write a Python program that:
 - Implements a **Doubly Linked List** with functions to insert elements at the beginning and the end of the list.
 - Implements a search function to check if a given element exists in the list.
