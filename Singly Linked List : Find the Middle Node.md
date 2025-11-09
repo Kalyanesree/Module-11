@@ -1,15 +1,15 @@
-# 📚 Singly Linked List : Find the Middle Node of a Singly Linked List Using Recursion
+# EX 11 (C) Singly Linked List : Find the Middle Node of a Singly Linked List Using Recursion
 
 This Python program demonstrates how to find the middle node of a singly linked list using recursion. The program calculates the middle element by utilizing two pointers, with one pointer moving one step at a time (slow) and the other moving two steps at a time (fast). When the fast pointer reaches the end of the list, the slow pointer will be at the middle node.
 
-## 🎯 Aim
+## Aim
 
 To write a Python program that:
 - Creates a singly linked list.
 - Uses recursion to find the middle node of the list.
 - In case of an even number of nodes, it returns the second middle element.
 
-## 🧠 Algorithm
+## Algorithm
 
 1. **Node Class**: 
    - Define a `Node` class to represent each node in the singly linked list. Each node has two attributes: `data` and `next`.
@@ -35,11 +35,47 @@ To write a Python program that:
 
 ---
 
-## 💻 Program
-Add code here
+## Program
+```
+class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+      
+class LinkedList:
+  
+    def __init__(self):
+        self.head = None
 
-## Sample Input & Output
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+          
+    def printMiddle(self):
+        slow=self.head
+        fast=self.head
+        
+        if not self.head:
+            print("empty")
+            return
+        
+        while fast and fast.next.next:
+            slow=slow.next.next
+            fast=fast.next.next.next
+            
+            print(slow.data)
+            
+llist = LinkedList() 
+for i in range(5):
+    value = input()
+    llist.push(value)
+
+llist.printMiddle()
+```
+## Output
+<img width="318" height="209" alt="image" src="https://github.com/user-attachments/assets/622a846b-d0ee-4064-a866-f73a74ea2f55" />
 
 ## Result
-
+  Thus, the python program to find the middle node of a singly linked list using recursion has been executed successfully.
 
