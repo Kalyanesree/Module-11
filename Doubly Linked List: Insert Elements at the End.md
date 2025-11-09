@@ -1,10 +1,10 @@
-# 📚 Doubly Linked List: Insert Elements at the End of a Doubly Linked List
+# EX 11 (A) Doubly Linked List: Insert Elements at the End of a Doubly Linked List
 
 This Python program demonstrates the creation and manipulation of a **Doubly Linked List** where elements can be inserted at the **end** of the list. The program also provides a method to traverse the list and display the elements.
 
 ---
 
-## 🎯 Aim
+## Aim
 
 To write a Python program that:
 - Implements a **Doubly Linked List**.
@@ -13,7 +13,7 @@ To write a Python program that:
 
 ---
 
-## 🧠 Algorithm
+## Algorithm
 
 1. **Step 1:** Define a class `Node` to represent each node in the doubly linked list with attributes:
    - `item` for storing the data of the node.
@@ -34,10 +34,60 @@ To write a Python program that:
 
 ---
 
-## 💻 Program
-Add Code here
+## Program
+```
+class Node:
+    def __init__(self, item):
+        self.item = item
+        self.nref = None  # Reference to the next node
+        self.pref = None  # Reference to the previous node
 
-## Sample Output
+class DoublyLinkedList:
+    def __init__(self):
+        self.start_node = None  
+    
+    def insert_in_emptylist(self, data):
+        if self.start_node is None:
+            new_node = Node(data)
+            self.start_node = new_node
+        else:
+            print("The list is not empty!")
+
+   
+    def insert_at_end(self, data):
+        
+        if self.start_node is None:
+            self.insert_in_emptylist(data)
+            return
+       
+        n = self.start_node
+        while n.nref is not None:
+            n = n.nref
+        new_node = Node(data)
+        n.nref = new_node
+        new_node.pref = n
+
+
+    def traverse_list(self):
+        if self.start_node is None:
+            print("The list is empty.")
+            return
+        else:
+            n = self.start_node
+            while n is not None:
+                print(n.item, end=" ")
+                n = n.nref
+            print()
+dll = DoublyLinkedList()
+dll.insert_at_end(10)
+dll.insert_at_end(20)
+dll.insert_at_end(30)
+dll.insert_at_end(40)
+dll.traverse_list()
+```
+
+## Output
+<img width="255" height="182" alt="image" src="https://github.com/user-attachments/assets/022585af-5319-4b4b-8e9f-04e339e42066" />
 
 ## Result
-
+  Thus, the python program that insert elements at the end of a doubly linked list is executed successfully.
