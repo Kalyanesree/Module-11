@@ -5,7 +5,6 @@ This project contains a simple implementation of a **singly linked list** in Pyt
 ---
 
 ## Aim
-
 To write a Python program to search for a given element in a singly linked list using object-oriented programming principles.
 
 ---
