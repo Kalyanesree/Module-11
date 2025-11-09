@@ -3,7 +3,6 @@
 This Python program demonstrates how to find the middle node of a singly linked list using recursion. The program calculates the middle element by utilizing two pointers, with one pointer moving one step at a time (slow) and the other moving two steps at a time (fast). When the fast pointer reaches the end of the list, the slow pointer will be at the middle node.
 
 ## Aim
-
 To write a Python program that:
 - Creates a singly linked list.
 - Uses recursion to find the middle node of the list.
